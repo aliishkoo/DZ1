@@ -16,6 +16,8 @@ gmailButton.onclick = () => {
     }
 }
 
+//MOVE BLOCK
+
 const childBlock = document.querySelector('.child_block');
 const parentBlock = document.querySelector('.parent_block');
 
@@ -23,13 +25,13 @@ let position = 0;
 
 const moveBlock = () => {
     const parentWidth = parentBlock.offsetWidth;
-    const childWidht = childBlock.offsetWidth;
+    const childWidth = childBlock.offsetWidth;
 
-    if (position < parentWidth - childWidht) {
+    if (position < parentWidth - childWidth) {
         position++
         childBlock.style.left = `${position}px`
         requestAnimationFrame(moveBlock);
     }
-};
+}; 
 
 moveBlock();
